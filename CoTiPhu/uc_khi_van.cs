@@ -12,6 +12,8 @@ namespace CoTiPhu
 {
     public partial class uc_khi_van : UserControl
     {
+        Color color_choose = Color.DarkCyan;
+        Color color_origin = Color.Gold;
         public uc_khi_van()
         {
             InitializeComponent();
@@ -22,6 +24,15 @@ namespace CoTiPhu
             bt_user1.BackColor = color1;
             bt_user2.BackColor = color2;
             bt_user3.BackColor = color3;
+        }
+        int time_sleep = 500;
+        public void choose()
+        {
+            BackColor = color_choose;
+        }
+        public void unchoose()
+        {
+            BackColor = color_origin;
         }
         public void update_user(int id)
         {

@@ -41,9 +41,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::CoTiPhu.Properties.Resources.kisspng_computer_icons_scalable_vector_graphics_portable_n_fee_financial_income_pay_payment_salary_serv_5cde7db3af6962_4872960115580850437185__1_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 87);
+            this.pictureBox1.Size = new System.Drawing.Size(89, 101);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -61,53 +61,53 @@
             // 
             this.bt_user3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user3.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user3.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_user3.Location = new System.Drawing.Point(152, 91);
+            this.bt_user3.Location = new System.Drawing.Point(146, 94);
             this.bt_user3.Name = "bt_user3";
             this.bt_user3.Size = new System.Drawing.Size(34, 22);
-            this.bt_user3.TabIndex = 2;
+            this.bt_user3.TabIndex = 10;
             this.bt_user3.UseVisualStyleBackColor = false;
+            this.bt_user3.Visible = false;
             // 
             // bt_user2
             // 
             this.bt_user2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user2.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user2.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_user2.Location = new System.Drawing.Point(152, 26);
+            this.bt_user2.Location = new System.Drawing.Point(146, 29);
             this.bt_user2.Name = "bt_user2";
             this.bt_user2.Size = new System.Drawing.Size(34, 22);
-            this.bt_user2.TabIndex = 3;
+            this.bt_user2.TabIndex = 11;
             this.bt_user2.UseVisualStyleBackColor = false;
+            this.bt_user2.Visible = false;
             // 
             // bt_user1
             // 
             this.bt_user1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user1.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user1.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_user1.Location = new System.Drawing.Point(9, 91);
+            this.bt_user1.Location = new System.Drawing.Point(11, 94);
             this.bt_user1.Name = "bt_user1";
             this.bt_user1.Size = new System.Drawing.Size(34, 22);
-            this.bt_user1.TabIndex = 4;
+            this.bt_user1.TabIndex = 12;
             this.bt_user1.UseVisualStyleBackColor = false;
+            this.bt_user1.Visible = false;
             // 
             // bt_user0
             // 
             this.bt_user0.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user0.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user0.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_user0.Location = new System.Drawing.Point(9, 26);
+            this.bt_user0.Location = new System.Drawing.Point(11, 29);
             this.bt_user0.Name = "bt_user0";
             this.bt_user0.Size = new System.Drawing.Size(34, 22);
-            this.bt_user0.TabIndex = 5;
+            this.bt_user0.TabIndex = 13;
             this.bt_user0.UseVisualStyleBackColor = false;
+            this.bt_user0.Visible = false;
             // 
             // uc_khi_van
             // 

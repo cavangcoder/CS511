@@ -244,6 +244,16 @@ namespace CoTiPhu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap poli {
+            get {
+                object obj = ResourceManager.GetObject("poli", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap police {
             get {
                 object obj = ResourceManager.GetObject("police", resourceCulture);

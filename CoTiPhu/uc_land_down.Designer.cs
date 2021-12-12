@@ -59,6 +59,7 @@
             this.bt_user1.Size = new System.Drawing.Size(47, 22);
             this.bt_user1.TabIndex = 1;
             this.bt_user1.UseVisualStyleBackColor = false;
+            this.bt_user1.Visible = false;
             this.bt_user1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bt_user0
@@ -73,6 +74,7 @@
             this.bt_user0.Size = new System.Drawing.Size(47, 22);
             this.bt_user0.TabIndex = 1;
             this.bt_user0.UseVisualStyleBackColor = false;
+            this.bt_user0.Visible = false;
             this.bt_user0.Click += new System.EventHandler(this.button1_Click);
             // 
             // lb_villa
@@ -99,6 +101,7 @@
             this.bt_user2.Size = new System.Drawing.Size(47, 22);
             this.bt_user2.TabIndex = 1;
             this.bt_user2.UseVisualStyleBackColor = false;
+            this.bt_user2.Visible = false;
             this.bt_user2.Click += new System.EventHandler(this.button1_Click);
             // 
             // bt_user3
@@ -113,6 +116,7 @@
             this.bt_user3.Size = new System.Drawing.Size(47, 22);
             this.bt_user3.TabIndex = 1;
             this.bt_user3.UseVisualStyleBackColor = false;
+            this.bt_user3.Visible = false;
             this.bt_user3.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
@@ -129,6 +133,7 @@
             // 
             // bt_name
             // 
+            this.bt_name.BackColor = System.Drawing.Color.White;
             this.bt_name.Dock = System.Windows.Forms.DockStyle.Top;
             this.bt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_name.Location = new System.Drawing.Point(3, 25);
@@ -136,7 +141,7 @@
             this.bt_name.Size = new System.Drawing.Size(188, 58);
             this.bt_name.TabIndex = 8;
             this.bt_name.Text = "PHẠM THẾ HIỂN";
-            this.bt_name.UseVisualStyleBackColor = true;
+            this.bt_name.UseVisualStyleBackColor = false;
             // 
             // pn_villa
             // 
@@ -196,7 +201,7 @@
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.Controls.Add(this.pn_house);
             this.Controls.Add(this.pn_villa);
             this.Controls.Add(this.bt_name);

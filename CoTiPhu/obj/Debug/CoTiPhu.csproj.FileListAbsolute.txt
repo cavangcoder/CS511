@@ -41,3 +41,4 @@ C:\ThanhLuan\C#\CoTiPhu\CS511\CoTiPhu\obj\Debug\CoTiPhu.uc_land_up.resources
 C:\ThanhLuan\C#\CoTiPhu\CS511\CoTiPhu\obj\Debug\CoTiPhu.uc_land_left.resources
 C:\ThanhLuan\C#\CoTiPhu\CS511\CoTiPhu\obj\Debug\CoTiPhu.uc_land_right.resources
 C:\ThanhLuan\C#\CoTiPhu\CS511\CoTiPhu\obj\Debug\CoTiPhu.uc_land_info.resources
+C:\ThanhLuan\C#\CoTiPhu\CS511\CoTiPhu\obj\Debug\Information.Information.resources

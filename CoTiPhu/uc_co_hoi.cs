@@ -12,9 +12,21 @@ namespace CoTiPhu
 {
     public partial class uc_co_hoi : UserControl
     {
+        Color color_choose = Color.DarkCyan;
+        Color color_origin = Color.White;
         public uc_co_hoi()
         {
             InitializeComponent();
+        }
+
+        int time_sleep = 500;
+        public void choose()
+        {
+            BackColor = color_choose;
+        }
+        public void unchoose()
+        {
+            BackColor = color_origin;
         }
 
         public void set_color_user(Color color0, Color color1, Color color2, Color color3)

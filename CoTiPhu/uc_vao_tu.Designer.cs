@@ -45,11 +45,11 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::CoTiPhu.Properties.Resources.sdfsdfsd1;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 6);
+            this.pictureBox2.Image = global::CoTiPhu.Properties.Resources.poli;
+            this.pictureBox2.Location = new System.Drawing.Point(14, 12);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(31, 0, 31, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(161, 113);
+            this.pictureBox2.Size = new System.Drawing.Size(149, 104);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -57,7 +57,7 @@
             // uc_vao_tu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Name = "uc_vao_tu";

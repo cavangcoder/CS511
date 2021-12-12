@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.pn_villa = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pn_house = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bt_name = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bt_user3 = new System.Windows.Forms.Button();
             this.bt_user2 = new System.Windows.Forms.Button();
             this.bt_user1 = new System.Windows.Forms.Button();
             this.bt_user0 = new System.Windows.Forms.Button();
             this.pn_villa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pn_house.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,16 @@
             this.pn_villa.Name = "pn_villa";
             this.pn_villa.Size = new System.Drawing.Size(76, 50);
             this.pn_villa.TabIndex = 19;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::CoTiPhu.Properties.Resources.villa;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -78,6 +88,16 @@
             this.pn_house.Size = new System.Drawing.Size(68, 45);
             this.pn_house.TabIndex = 20;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::CoTiPhu.Properties.Resources.house;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -91,33 +111,14 @@
             // 
             // bt_name
             // 
+            this.bt_name.BackColor = System.Drawing.Color.White;
             this.bt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_name.Location = new System.Drawing.Point(31, 3);
             this.bt_name.Name = "bt_name";
             this.bt_name.Size = new System.Drawing.Size(160, 83);
             this.bt_name.TabIndex = 18;
             this.bt_name.Text = "PHẠM\r\nTHẾ HIỂN";
-            this.bt_name.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::CoTiPhu.Properties.Resources.house;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::CoTiPhu.Properties.Resources.villa;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.bt_name.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -143,6 +144,7 @@
             this.bt_user3.Size = new System.Drawing.Size(22, 34);
             this.bt_user3.TabIndex = 25;
             this.bt_user3.UseVisualStyleBackColor = false;
+            this.bt_user3.Visible = false;
             // 
             // bt_user2
             // 
@@ -156,6 +158,7 @@
             this.bt_user2.Size = new System.Drawing.Size(22, 35);
             this.bt_user2.TabIndex = 26;
             this.bt_user2.UseVisualStyleBackColor = false;
+            this.bt_user2.Visible = false;
             // 
             // bt_user1
             // 
@@ -169,6 +172,7 @@
             this.bt_user1.Size = new System.Drawing.Size(22, 34);
             this.bt_user1.TabIndex = 27;
             this.bt_user1.UseVisualStyleBackColor = false;
+            this.bt_user1.Visible = false;
             // 
             // bt_user0
             // 
@@ -182,11 +186,12 @@
             this.bt_user0.Size = new System.Drawing.Size(22, 35);
             this.bt_user0.TabIndex = 28;
             this.bt_user0.UseVisualStyleBackColor = false;
+            this.bt_user0.Visible = false;
             // 
             // uc_land_right
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.LightGreen;
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_villa);
             this.Controls.Add(this.pn_house);
@@ -197,10 +202,10 @@
             this.Size = new System.Drawing.Size(194, 145);
             this.pn_villa.ResumeLayout(false);
             this.pn_villa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pn_house.ResumeLayout(false);
             this.pn_house.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -16,5 +16,16 @@ namespace CoTiPhu
         {
             InitializeComponent();
         }
+        Color color_choose = Color.DarkCyan;
+        Color color_origin = Color.White;
+        int time_sleep = 500;
+        public void choose()
+        {
+            BackColor = color_choose;
+        }
+        public void unchoose()
+        {
+            BackColor = color_origin;
+        }
     }
 }

@@ -51,9 +51,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::CoTiPhu.Properties.Resources.imgbin_computer_icons_symbol_question_mark_png1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(140, 110);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -61,33 +61,32 @@
             // 
             this.bt_user3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user3.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user3.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_user3.Location = new System.Drawing.Point(152, 94);
+            this.bt_user3.Location = new System.Drawing.Point(148, 94);
             this.bt_user3.Name = "bt_user3";
             this.bt_user3.Size = new System.Drawing.Size(34, 22);
             this.bt_user3.TabIndex = 6;
             this.bt_user3.UseVisualStyleBackColor = false;
+            this.bt_user3.Visible = false;
             // 
             // bt_user2
             // 
             this.bt_user2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user2.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user2.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_user2.Location = new System.Drawing.Point(152, 29);
+            this.bt_user2.Location = new System.Drawing.Point(148, 29);
             this.bt_user2.Name = "bt_user2";
             this.bt_user2.Size = new System.Drawing.Size(34, 22);
             this.bt_user2.TabIndex = 7;
             this.bt_user2.UseVisualStyleBackColor = false;
+            this.bt_user2.Visible = false;
             // 
             // bt_user1
             // 
             this.bt_user1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user1.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user1.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_user1.Location = new System.Drawing.Point(9, 94);
@@ -95,12 +94,12 @@
             this.bt_user1.Size = new System.Drawing.Size(34, 22);
             this.bt_user1.TabIndex = 8;
             this.bt_user1.UseVisualStyleBackColor = false;
+            this.bt_user1.Visible = false;
             // 
             // bt_user0
             // 
             this.bt_user0.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user0.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user0.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_user0.Location = new System.Drawing.Point(9, 29);
@@ -108,10 +107,12 @@
             this.bt_user0.Size = new System.Drawing.Size(34, 22);
             this.bt_user0.TabIndex = 9;
             this.bt_user0.UseVisualStyleBackColor = false;
+            this.bt_user0.Visible = false;
             // 
             // uc_co_hoi
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.bt_user3);
             this.Controls.Add(this.bt_user2);
             this.Controls.Add(this.bt_user1);

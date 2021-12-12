@@ -47,11 +47,13 @@
             this.bt_user3.BackColor = System.Drawing.Color.IndianRed;
             this.bt_user3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_user3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bt_user3.Location = new System.Drawing.Point(128, 120);
             this.bt_user3.Name = "bt_user3";
             this.bt_user3.Size = new System.Drawing.Size(34, 22);
             this.bt_user3.TabIndex = 19;
             this.bt_user3.UseVisualStyleBackColor = false;
+            this.bt_user3.Visible = false;
             this.bt_user3.Click += new System.EventHandler(this.bt_user3_Click);
             // 
             // bt_user2
@@ -60,11 +62,13 @@
             this.bt_user2.BackColor = System.Drawing.Color.IndianRed;
             this.bt_user2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_user2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bt_user2.Location = new System.Drawing.Point(68, 120);
             this.bt_user2.Name = "bt_user2";
             this.bt_user2.Size = new System.Drawing.Size(34, 22);
             this.bt_user2.TabIndex = 20;
             this.bt_user2.UseVisualStyleBackColor = false;
+            this.bt_user2.Visible = false;
             // 
             // bt_user1
             // 
@@ -72,11 +76,13 @@
             this.bt_user1.BackColor = System.Drawing.Color.IndianRed;
             this.bt_user1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_user1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bt_user1.Location = new System.Drawing.Point(4, 76);
             this.bt_user1.Name = "bt_user1";
             this.bt_user1.Size = new System.Drawing.Size(34, 22);
             this.bt_user1.TabIndex = 21;
             this.bt_user1.UseVisualStyleBackColor = false;
+            this.bt_user1.Visible = false;
             // 
             // bt_user0
             // 
@@ -84,11 +90,13 @@
             this.bt_user0.BackColor = System.Drawing.Color.IndianRed;
             this.bt_user0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_user0.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bt_user0.Location = new System.Drawing.Point(4, 19);
             this.bt_user0.Name = "bt_user0";
             this.bt_user0.Size = new System.Drawing.Size(34, 22);
             this.bt_user0.TabIndex = 22;
             this.bt_user0.UseVisualStyleBackColor = false;
+            this.bt_user0.Visible = false;
             // 
             // panel1
             // 
@@ -110,7 +118,7 @@
             this.bt_tu0.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_tu0.BackgroundImage")));
             this.bt_tu0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_tu0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_tu0.Location = new System.Drawing.Point(24, 7);
+            this.bt_tu0.Location = new System.Drawing.Point(28, 7);
             this.bt_tu0.Name = "bt_tu0";
             this.bt_tu0.Size = new System.Drawing.Size(40, 40);
             this.bt_tu0.TabIndex = 22;
@@ -123,7 +131,7 @@
             this.bt_tu3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_tu3.BackgroundImage")));
             this.bt_tu3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_tu3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_tu3.Location = new System.Drawing.Point(78, 62);
+            this.bt_tu3.Location = new System.Drawing.Point(82, 62);
             this.bt_tu3.Name = "bt_tu3";
             this.bt_tu3.Size = new System.Drawing.Size(40, 40);
             this.bt_tu3.TabIndex = 19;
@@ -136,7 +144,7 @@
             this.bt_tu2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_tu2.BackgroundImage")));
             this.bt_tu2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_tu2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_tu2.Location = new System.Drawing.Point(24, 62);
+            this.bt_tu2.Location = new System.Drawing.Point(28, 62);
             this.bt_tu2.Name = "bt_tu2";
             this.bt_tu2.Size = new System.Drawing.Size(40, 40);
             this.bt_tu2.TabIndex = 20;
@@ -149,7 +157,7 @@
             this.bt_tu1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_tu1.BackgroundImage")));
             this.bt_tu1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_tu1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_tu1.Location = new System.Drawing.Point(78, 7);
+            this.bt_tu1.Location = new System.Drawing.Point(82, 7);
             this.bt_tu1.Name = "bt_tu1";
             this.bt_tu1.Size = new System.Drawing.Size(40, 40);
             this.bt_tu1.TabIndex = 21;
@@ -159,8 +167,7 @@
             // uc_tu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bt_user3);
             this.Controls.Add(this.bt_user2);
@@ -169,7 +176,7 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "uc_tu";
             this.Padding = new System.Windows.Forms.Padding(3);
-            this.Size = new System.Drawing.Size(197, 148);
+            this.Size = new System.Drawing.Size(194, 145);
             this.Load += new System.EventHandler(this.uc_tu_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

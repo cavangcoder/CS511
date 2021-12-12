@@ -14,7 +14,8 @@ namespace CoTiPhu
     {
         int count_house = 0;
         int count_villa = 0;
-
+        Color color_choose = Color.DarkCyan;
+        Color color_origin = Color.LightGoldenrodYellow;
         //bool user0 = false;
         //bool user1 = false;
         //bool user2 = false;
@@ -24,6 +25,16 @@ namespace CoTiPhu
         {
             InitializeComponent();
         }
+        int time_sleep = 500;
+        public void choose()
+        {
+            BackColor = color_choose;
+        }
+        public void unchoose()
+        {
+            BackColor = color_origin;
+        }
+
         public void rename(string name)
         {
             bt_name.Text = name;

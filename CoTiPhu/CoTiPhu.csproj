@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Information.designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <Compile Include="uc_start.Designer.cs">
       <DependentUpon>uc_start.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +256,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\M6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poli.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\buy.wav" />
+    <Content Include="Resources\sound_dice.wav" />
+    <Content Include="Resources\money.wav" />
+    <Content Include="Resources\move.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
