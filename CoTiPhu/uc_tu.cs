@@ -48,5 +48,15 @@ namespace CoTiPhu
                     break;
             }
         }
+
+        private void uc_tu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_user3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

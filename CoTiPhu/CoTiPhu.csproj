@@ -59,29 +59,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="uc_pland_down.cs">
+    <Compile Include="uc_land_down.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uc_pland_down.Designer.cs">
-      <DependentUpon>uc_pland_down.cs</DependentUpon>
+    <Compile Include="uc_land_down.Designer.cs">
+      <DependentUpon>uc_land_down.cs</DependentUpon>
     </Compile>
-    <Compile Include="uc_pland_up.cs">
+    <Compile Include="uc_land_info.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uc_pland_up.Designer.cs">
-      <DependentUpon>uc_pland_up.cs</DependentUpon>
+    <Compile Include="uc_land_info.Designer.cs">
+      <DependentUpon>uc_land_info.cs</DependentUpon>
     </Compile>
-    <Compile Include="uc_pland_left.cs">
+    <Compile Include="uc_land_up.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uc_pland_left.Designer.cs">
-      <DependentUpon>uc_pland_left.cs</DependentUpon>
+    <Compile Include="uc_land_up.Designer.cs">
+      <DependentUpon>uc_land_up.cs</DependentUpon>
     </Compile>
-    <Compile Include="uc_pland_right.cs">
+    <Compile Include="uc_land_left.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uc_pland_right.Designer.cs">
-      <DependentUpon>uc_pland_right.cs</DependentUpon>
+    <Compile Include="uc_land_left.Designer.cs">
+      <DependentUpon>uc_land_left.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_land_right.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_land_right.Designer.cs">
+      <DependentUpon>uc_land_right.cs</DependentUpon>
     </Compile>
     <Compile Include="uc_khi_van.cs">
       <SubType>UserControl</SubType>
@@ -127,17 +133,20 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="uc_pland_down.resx">
-      <DependentUpon>uc_pland_down.cs</DependentUpon>
+    <EmbeddedResource Include="uc_land_down.resx">
+      <DependentUpon>uc_land_down.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uc_pland_up.resx">
-      <DependentUpon>uc_pland_up.cs</DependentUpon>
+    <EmbeddedResource Include="uc_land_info.resx">
+      <DependentUpon>uc_land_info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uc_pland_left.resx">
-      <DependentUpon>uc_pland_left.cs</DependentUpon>
+    <EmbeddedResource Include="uc_land_up.resx">
+      <DependentUpon>uc_land_up.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uc_pland_right.resx">
-      <DependentUpon>uc_pland_right.cs</DependentUpon>
+    <EmbeddedResource Include="uc_land_left.resx">
+      <DependentUpon>uc_land_left.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_land_right.resx">
+      <DependentUpon>uc_land_right.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_khi_van.resx">
       <DependentUpon>uc_khi_van.cs</DependentUpon>
@@ -220,6 +229,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

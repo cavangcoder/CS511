@@ -10,15 +10,20 @@ using System.Windows.Forms;
 
 namespace CoTiPhu
 {
-    public partial class uc_pland_left : UserControl
+    public partial class uc_land_down : UserControl
     {
         int count_house = 0;
         int count_villa = 0;
-        public uc_pland_left()
+
+        //bool user0 = false;
+        //bool user1 = false;
+        //bool user2 = false;
+        //bool user3 = false;
+
+        public uc_land_down()
         {
             InitializeComponent();
         }
-
         public void rename(string name)
         {
             bt_name.Text = name;
@@ -52,7 +57,7 @@ namespace CoTiPhu
         {
             switch (id)
             {
-                case 0:
+                case 0: 
                     bt_user0.Visible ^= true;
                     break;
                 case 1:
@@ -67,6 +72,47 @@ namespace CoTiPhu
                 default:
                     break;
             }
+        }
+
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 }

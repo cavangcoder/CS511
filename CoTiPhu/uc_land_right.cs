@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace CoTiPhu
 {
-    public partial class uc_pland_right : UserControl
+    public partial class uc_land_right : UserControl
     {
         int count_house = 0;
         int count_villa = 0;
-        public uc_pland_right()
+        public uc_land_right()
         {
             InitializeComponent();
         }

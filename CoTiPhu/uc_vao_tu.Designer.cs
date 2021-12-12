@@ -57,6 +57,7 @@
             // uc_vao_tu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Name = "uc_vao_tu";

@@ -38,7 +38,6 @@
             // 
             this.bt_user3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user3.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user3.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_user3.Location = new System.Drawing.Point(152, 106);
@@ -51,10 +50,9 @@
             // 
             this.bt_user2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user2.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user2.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_user2.Location = new System.Drawing.Point(152, 57);
+            this.bt_user2.Location = new System.Drawing.Point(152, 78);
             this.bt_user2.Name = "bt_user2";
             this.bt_user2.Size = new System.Drawing.Size(34, 22);
             this.bt_user2.TabIndex = 11;
@@ -64,10 +62,9 @@
             // 
             this.bt_user1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user1.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user1.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_user1.Location = new System.Drawing.Point(9, 106);
+            this.bt_user1.Location = new System.Drawing.Point(112, 106);
             this.bt_user1.Name = "bt_user1";
             this.bt_user1.Size = new System.Drawing.Size(34, 22);
             this.bt_user1.TabIndex = 12;
@@ -77,10 +74,10 @@
             // 
             this.bt_user0.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.bt_user0.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_user0.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
             this.bt_user0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_user0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_user0.Location = new System.Drawing.Point(9, 57);
+            this.bt_user0.Location = new System.Drawing.Point(72, 106);
+            this.bt_user0.Margin = new System.Windows.Forms.Padding(0);
             this.bt_user0.Name = "bt_user0";
             this.bt_user0.Size = new System.Drawing.Size(34, 22);
             this.bt_user0.TabIndex = 13;
@@ -101,7 +98,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "uc_start";
-            this.Size = new System.Drawing.Size(194, 145);
+            this.Size = new System.Drawing.Size(189, 131);
             this.ResumeLayout(false);
 
         }

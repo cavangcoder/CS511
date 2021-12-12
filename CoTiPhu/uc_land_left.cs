@@ -10,20 +10,15 @@ using System.Windows.Forms;
 
 namespace CoTiPhu
 {
-    public partial class uc_pland_down : UserControl
+    public partial class uc_land_left : UserControl
     {
         int count_house = 0;
         int count_villa = 0;
-
-        //bool user0 = false;
-        //bool user1 = false;
-        //bool user2 = false;
-        //bool user3 = false;
-
-        public uc_pland_down()
+        public uc_land_left()
         {
             InitializeComponent();
         }
+
         public void rename(string name)
         {
             bt_name.Text = name;
@@ -48,23 +43,23 @@ namespace CoTiPhu
         }
         public void set_color_user(Color color0, Color color1, Color color2, Color color3)
         {
-            bt_user0.BackColor = color0;
+            bt_user2.BackColor = color0;
             bt_user1.BackColor = color1;
-            bt_user2.BackColor = color2;
+            bt_user0.BackColor = color2;
             bt_user3.BackColor = color3;
         }
         public void update_user(int id)
         {
             switch (id)
             {
-                case 0: 
-                    bt_user0.Visible ^= true;
+                case 0:
+                    bt_user2.Visible ^= true;
                     break;
                 case 1:
                     bt_user1.Visible ^= true;
                     break;
                 case 2:
-                    bt_user2.Visible ^= true;
+                    bt_user0.Visible ^= true;
                     break;
                 case 3:
                     bt_user3.Visible ^= true;
@@ -72,27 +67,6 @@ namespace CoTiPhu
                 default:
                     break;
             }
-        }
-
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
