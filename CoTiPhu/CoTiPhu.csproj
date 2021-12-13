@@ -131,6 +131,12 @@
     <Compile Include="uc_start.Designer.cs">
       <DependentUpon>uc_start.cs</DependentUpon>
     </Compile>
+    <Compile Include="Winer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Winer.designer.cs">
+      <DependentUpon>Winer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Information.resx">
       <DependentUpon>Information.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uc_tu.resx">
       <DependentUpon>uc_tu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winer.resx">
+      <DependentUpon>Winer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -231,9 +240,6 @@
     <None Include="Resources\106217_sound_icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\103167_speaker_audio_sound_music_volume_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Checkered flag tattoo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -261,10 +267,20 @@
     <None Include="Resources\poli.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\buy.wav" />
+    <None Include="Resources\vaotu.wav" />
+    <None Include="Resources\no_sound.png" />
+    <None Include="Resources\sound_.bmp" />
+    <None Include="Resources\sound_.png" />
+    <None Include="Resources\sound_1.png" />
+    <None Include="Resources\no_sound1.png" />
+    <None Include="Resources\dice.wav" />
+    <None Include="Resources\money.wav" />
+    <None Include="Resources\buy.wav" />
+    <None Include="Resources\move.wav" />
+    <None Include="Resources\6dmeoIGMtYO27Dz-Red-Arrow-PNG-Backgádasdsadaround-Image.png" />
+    <None Include="Resources\do.bmp" />
+    <None Include="Resources\255511156_1052893648835783_5479502869333938099_n.jpg" />
     <Content Include="Resources\sound_dice.wav" />
-    <Content Include="Resources\money.wav" />
-    <Content Include="Resources\move.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

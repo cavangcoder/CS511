@@ -19,10 +19,13 @@ namespace CoTiPhu
         int current_user = 0;
         const int COE_VILLA = 2;
         int step;
-        SoundPlayer sound_dice  = new SoundPlayer(@"C:\\ThanhLuan\\C#\\CoTiPhu\\CS511\\CoTiPhu\\Resources\\sound_dice.wav");
-        SoundPlayer sound_buy   = new SoundPlayer(@"C:\\ThanhLuan\\C#\\CoTiPhu\\CS511\\CoTiPhu\\Resources\\buy.wav");
-        SoundPlayer sound_money = new SoundPlayer(@"C:\\ThanhLuan\\C#\\CoTiPhu\\CS511\\CoTiPhu\\Resources\\money.wav");
-        SoundPlayer sound_move  = new SoundPlayer(@"C:\\ThanhLuan\\C#\\CoTiPhu\\CS511\\CoTiPhu\\Resources\\move.wav");
+        bool nosound = false;
+       
+        SoundPlayer sound_move  = new SoundPlayer(Properties.Resources.move);
+        SoundPlayer sound_dice  = new SoundPlayer(Properties.Resources.dice_);
+        SoundPlayer sound_money  = new SoundPlayer(Properties.Resources.money);
+        SoundPlayer sound_buy  = new SoundPlayer(Properties.Resources.buy);
+        SoundPlayer sound_vaotu  = new SoundPlayer(Properties.Resources.vaotu);
 
 
         DataTable lands_info = new DataTable();
@@ -52,6 +55,7 @@ namespace CoTiPhu
                 {
                     money += money_start;
                 }
+         
             }
         }
 
@@ -60,12 +64,17 @@ namespace CoTiPhu
             public int owner;
             public int house;
             public int villa;
-
+            public int price;
             public void set_info(int Owner = 4, int House = 0, int Villa = 0)
             {
                 owner = Owner;
                 house = House;
                 villa = Villa;
+                price = 30;
+            }
+            public void update_price()
+            {
+                price = 30 + 75 * house;
             }
 
 
@@ -82,6 +91,8 @@ namespace CoTiPhu
             set_users();
             set_colors_uc();
             start();
+            for (int i = 0; i < 22; ++i)
+                lands[i].set_info();
             
         }
         private void start()
@@ -216,6 +227,7 @@ namespace CoTiPhu
         {
             
         }
+       
         private void choose_land( int id_land)
         {
             switch (id_land)
@@ -380,11 +392,20 @@ namespace CoTiPhu
             time_dice = 0;
             lock_dice = true;
             tm_dice.Start();
-            //sound_dice = new SoundPlayer(@"C:\\ThanhLuan\\C#\\CoTiPhu\\CS511\\CoTiPhu\\Resources\\dice.wav");
-            //sound_dice.Load();
-            sound_dice.Play();
+            if (!nosound) sound_dice.Play();
         }
+        void ra_tu()
+        {
+            users[current_user].prison = true;
+            users[current_user].position = 6;
+            
+            sound_vaotu.Stop();
+            if (!nosound) sound_vaotu.Play();
 
+            uc_6.ra_tu(current_user);
+            uc_6.update_user(current_user); 
+
+        }
         private void tm_dice_Tick(object sender, EventArgs e)
         {
             time_dice += 1;
@@ -394,11 +415,17 @@ namespace CoTiPhu
                 tm_dice.Stop();
                 sound_dice.Stop();
                 step = dice;
-                //now_state  = users[current_user].position;
-                //next_state = (now_state + dice) % 22;
-                //users[current_user].position = next_state;
-                tm_choose.Start();
-               
+                
+                if (users[current_user].prison == false) tm_choose.Start();
+                if (dice == 1 || dice == 6)
+                {
+                    if (users[current_user].prison)
+                        ra_tu();
+                    lock_dice = false;
+                    users[current_user].prison = false;
+                    
+
+                }
                 return;
 
             }
@@ -435,6 +462,13 @@ namespace CoTiPhu
             lb_money1.Text = users[1].money.ToString();
             lb_money2.Text = users[2].money.ToString();
             lb_money3.Text = users[3].money.ToString();
+            int cnt = 0;
+            if (users[0].money <= 0) ++cnt;
+            if (users[1].money <= 0) ++cnt;
+            if (users[2].money <= 0) ++cnt;
+            if (users[3].money <= 0) ++cnt;
+
+            if (cnt > 2) uc_winer.Visible = true;
         }
 
         private void pn_main_game_Paint(object sender, PaintEventArgs e)
@@ -639,7 +673,8 @@ namespace CoTiPhu
 
         private void bt_sound_Click(object sender, EventArgs e)
         {
-
+            nosound ^= true;
+            bt_sound.BackgroundImage = nosound ? Properties.Resources.no_sound : Properties.Resources.sound_;
         }
 
         private void main_Load(object sender, EventArgs e)
@@ -656,17 +691,69 @@ namespace CoTiPhu
         {
 
         }
+        void unbuy() { 
+            switch (users[current_user].position)
+            {
+                case 1: uc_1.unbuy(); break;
+                //case 2: uc_2.buy(current_user); break;
+                case 3: uc_3.unbuy(); break;
+                //case 4: uc_4.buy(current_user); break;
+                case 5: uc_5.unbuy(); break;
+                // case 6: uc_6.buy(current_user); break;
+                case 7: uc_7.unbuy(); break;
+                // case 8: uc_8.buy(current_user); break;
+                case 9: uc_9.unbuy();  break;
+                case 10: uc_10.unbuy(); break;
+                // case 11: uc_11.buy(current_user);; break;
+                case 12: uc_12.unbuy(); break;
+                // case 13: uc_13.buy(current_user);; break;
+                case 14: uc_14.unbuy(); break;
+                //    case 15: uc_15.buy(current_user);; break;
+                case 16: uc_16.unbuy(); break;
+                // case 17: vo_tu(); break;
+                case 18: uc_18.unbuy(); break;
+                // case 19: uc_19.buy(current_user);; break;
+                case 20: uc_20.unbuy(); break;
+                case 21: uc_21.unbuy(); break;
+                default:
+                    break;
+            }
+        }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            int pos = users[current_user].position;
+            if (lands[pos].owner != current_user) return;
+
             sound_buy.Stop();
-            sound_buy.Play();
+            if (!nosound) sound_buy.Play();
+
+            users[current_user].money += 150 + 50 * lands[pos].house + 50 * lands[pos].villa;
+            lands[pos].set_info(4,0,0);
+            update_money();
+            unbuy();
         }
 
         private void bt_end_step_Click(object sender, EventArgs e)
         {
             lock_dice = false;
+            // if (lock_dice) return;
+            switch (current_user) {
+                case 0: pn_user0.BackColor = Color.White; break;
+                case 1: pn_user1.BackColor = Color.White; break;
+                case 2: pn_user2.BackColor = Color.White; break;
+                case 3: pn_user3.BackColor = Color.White; break;
+                    
+            }
             current_user = (current_user + 1) % 4;
+            switch (current_user)
+            {
+                case 0: pn_user0.BackColor = Color.DarkCyan; break;
+                case 1: pn_user1.BackColor = Color.DarkCyan; break;
+                case 2: pn_user2.BackColor = Color.DarkCyan; break;
+                case 3: pn_user3.BackColor = Color.DarkCyan; break;
+
+            }
         }
 
         private void land_load_info(string str_id)
@@ -682,7 +769,7 @@ namespace CoTiPhu
                 int XayNha  = row.Field<int>(4);
                 int ThueNha = row.Field<int>(5);
                 int ThueKS  = row.Field<int>(6);
-                uc_info_land.Load_Data(id, name, MuaDat, ThueDat, XayNha, ThueNha, ThueKS);
+                //uc_info_land.Load_Data(id, name, MuaDat, ThueDat, XayNha, ThueNha, ThueKS);
                 break;
             }
         }
@@ -701,11 +788,16 @@ namespace CoTiPhu
             //uc_info_land.Visible = true;
             
         }
+        
+
         void vo_tu()
         {
             users[current_user].prison = true;
-            users[current_user].position = 7;
-            
+            users[current_user].position = 6;
+            uc_6.vao_tu(current_user);
+
+            sound_vaotu.Stop();
+            if (!nosound) sound_vaotu.Play();
         }
         void land_user_update(int id_land, int user)
         {
@@ -728,7 +820,7 @@ namespace CoTiPhu
                 case 14: uc_14.update_user(user); break;
                 case 15: uc_15.update_user(user); break;
                 case 16: uc_16.update_user(user); break;
-                case 17: vo_tu(); break;
+               // case 17: vo_tu(); break;
                 case 18: uc_18.update_user(user); break;
                 case 19: uc_19.update_user(user); break;
                 case 20: uc_20.update_user(user); break;
@@ -739,7 +831,61 @@ namespace CoTiPhu
             }
 
         }
-        private void tm_choose_Tick(object sender, EventArgs e)
+        void ves()
+        {
+            int pos = users[current_user].position;
+            tb_info.Text = "";
+            if (pos == 2 || pos == 8 || pos == 15)
+            {   
+                if (pos == 8)
+                {
+                    tb_info.Text = "Tài vận chưa đến, Chúc bạn may mắn lần sau!";
+                    return;
+                }
+                sound_money.Stop();
+                if (!nosound) sound_money.Play();
+                
+                tb_info.Text = "Nhận tiền lương hưu lãnh 100$";
+                users[current_user].money += 100;
+                update_money();
+            }
+
+            if (pos == 4 || pos == 13 || pos == 19)
+            {
+                if (pos == 4)
+                {
+                    sound_money.Stop();
+                    if (!nosound) sound_money.Play();
+
+                    tb_info.Text = "Nhận tiền bảo hiểm 200$";
+                    users[current_user].money += 200;
+                    update_money();
+                    return;
+                }
+                sound_money.Stop();
+                if (!nosound) sound_money.Play();
+                tb_info.Text = "Thuế thu nhập cá nhân đóng 50$";
+                users[current_user].money -= 50;
+                update_money();
+            }
+
+            
+
+
+        }
+        void check_price()
+        {
+            int pos = users[current_user].position;
+            if (lands[pos].owner < 4 && lands[pos].owner != current_user)
+            {
+                sound_money.Stop();
+                if (!nosound) sound_money.Play();
+                users[current_user].money -= lands[pos].price;
+                users[lands[pos].owner].money += lands[pos].price;
+            }
+            update_money();
+        }
+        void tm_choose_Tick(object sender, EventArgs e)
         {
             unchoose_land(users[current_user].position);
             sound_move.Stop();
@@ -747,20 +893,115 @@ namespace CoTiPhu
             {
                 tm_choose.Stop();
                 update_money();
+                check_price();
+                if (users[current_user].position == 17) vo_tu();
+                ves();
                 return;
             }
-            sound_move.Play();
+
+            if (!nosound) sound_move.Play();
             land_user_update(users[current_user].position, current_user);
             users[current_user].move();
             land_user_update(users[current_user].position, current_user);
+            if (users[current_user].position == 0)
+            {
+                sound_money.Stop();
+                if (!nosound) sound_money.Play();
+            }
             
             choose_land(users[current_user].position);
         }
-
+        void land_buy()
+        {
+            switch (users[current_user].position)
+            { 
+                case 1: uc_1.buy(current_user); break;
+                //case 2: uc_2.buy(current_user); break;
+                case 3: uc_3.buy(current_user); break;
+                //case 4: uc_4.buy(current_user); break;
+                case 5: uc_5.buy(current_user); break;
+               // case 6: uc_6.buy(current_user); break;
+                case 7: uc_7.buy(current_user); break;
+               // case 8: uc_8.buy(current_user); break;
+                case 9: uc_9.buy(current_user); break;
+                case 10: uc_10.buy(current_user);; break;
+               // case 11: uc_11.buy(current_user);; break;
+                case 12: uc_12.buy(current_user);; break;
+               // case 13: uc_13.buy(current_user);; break;
+                case 14: uc_14.buy(current_user);; break;
+            //    case 15: uc_15.buy(current_user);; break;
+                case 16: uc_16.buy(current_user); ; break;
+                // case 17: vo_tu(); break;
+                case 18: uc_18.buy(current_user); ; break;
+               // case 19: uc_19.buy(current_user);; break;
+                case 20: uc_20.buy(current_user);; break;
+                case 21: uc_21.buy(current_user);; break;
+                default:
+                    break;
+            }
+        }
         private void bt_buy_Click(object sender, EventArgs e)
         {
+            int pos = users[current_user].position;
+            if (lands[pos].owner == current_user) return;
             sound_buy.Stop();
-            sound_buy.Play();
+            if (users[current_user].money < 200)
+            {
+                return;
+            }
+            if (!nosound) sound_buy.Play();
+            users[current_user].money -= 200;
+            land_buy();
+            
+            lands[pos].owner = current_user;
+            update_money();
+
+        }
+
+        private void uc_info_land_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        void build()
+        {
+            int pos = users[current_user].position;
+            switch (pos)
+            {
+                case 1:  uc_1. update_house(lands[pos].house); break;
+                case 3:  uc_3. update_house(lands[pos].house); break;
+                case 5:  uc_5. update_house(lands[pos].house); break;
+                case 7:  uc_7. update_house(lands[pos].house); break;
+                case 9:  uc_9. update_house(lands[pos].house); break;
+                case 10: uc_10.update_house(lands[pos].house);  break;
+                case 12: uc_12.update_house(lands[pos].house);  break;
+                case 14: uc_14.update_house(lands[pos].house);  break;
+                case 16: uc_16.update_house(lands[pos].house);  break;
+                case 18: uc_18.update_house(lands[pos].house);  break;
+                case 20: uc_20.update_house(lands[pos].house);  break;
+                case 21: uc_21.update_house(lands[pos].house);  break;
+                default:
+                    break;
+            }
+        }
+
+        private void bt_build_Click(object sender, EventArgs e)
+        {
+            int pos = users[current_user].position;
+            if (lands[pos].owner != current_user) return;
+            if (users[current_user].money < 75) return;
+            sound_buy.Stop();
+            if (!nosound) sound_buy.Play();
+
+            users[current_user].money -= 75;
+            lands[pos].house += 1;
+            build();
+            lands[pos].update_price();
+            update_money();
 
         }
     }

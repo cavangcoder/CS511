@@ -58,6 +58,30 @@ namespace CoTiPhu
                     break;
             }
         }
+        public void vao_tu(int id)
+        {
+            switch (id)
+            {
+                case 0: bt_tu0.BackColor = bt_user0.BackColor; break;
+                case 1: bt_tu1.BackColor = bt_user1.BackColor; break;
+                case 2: bt_tu2.BackColor = bt_user2.BackColor; break;
+                case 3: bt_tu3.BackColor = bt_user3.BackColor; break;
+                default:
+                    break;
+            }
+        }
+        public void ra_tu(int id)
+        {
+            switch (id)
+            {
+                case 0: bt_tu0.BackColor = Color.Silver; break;
+                case 1: bt_tu1.BackColor = Color.Silver; break;
+                case 2: bt_tu2.BackColor = Color.Silver; break;
+                case 3: bt_tu3.BackColor = Color.Silver; break;
+                default:
+                    break;
+            }
+        }
 
         private void uc_tu_Load(object sender, EventArgs e)
         {

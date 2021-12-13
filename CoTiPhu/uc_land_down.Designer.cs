@@ -152,6 +152,7 @@
             this.pn_villa.Name = "pn_villa";
             this.pn_villa.Size = new System.Drawing.Size(91, 50);
             this.pn_villa.TabIndex = 9;
+            this.pn_villa.Visible = false;
             // 
             // pictureBox1
             // 
@@ -185,6 +186,7 @@
             this.pn_house.Name = "pn_house";
             this.pn_house.Size = new System.Drawing.Size(94, 50);
             this.pn_house.TabIndex = 9;
+            this.pn_house.Visible = false;
             // 
             // pictureBox2
             // 

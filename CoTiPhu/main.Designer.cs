@@ -53,16 +53,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pb_avatar3 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.bt_cai_dat = new System.Windows.Forms.Button();
-            this.bt_trang_chu = new System.Windows.Forms.Button();
-            this.bt_sound = new System.Windows.Forms.Button();
             this.tb_info = new System.Windows.Forms.TextBox();
-            this.pb_dice = new System.Windows.Forms.PictureBox();
             this.pn_main_game = new System.Windows.Forms.Panel();
-            this.uc_info_land = new Information.Information();
+            this.uc_winer = new Information.Winer();
+            this.bt_build = new System.Windows.Forms.Button();
             this.bt_sell = new System.Windows.Forms.Button();
             this.bt_buy = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.bt_end_step = new System.Windows.Forms.Button();
             this.uc_13 = new CoTiPhu.uc_co_hoi();
             this.uc_12 = new CoTiPhu.uc_land_up();
@@ -86,10 +82,15 @@
             this.uc_9 = new CoTiPhu.uc_land_left();
             this.uc_10 = new CoTiPhu.uc_land_left();
             this.uc_11 = new CoTiPhu.uc_parking();
+            this.pb_dice = new System.Windows.Forms.PictureBox();
             this.uc_start2 = new CoTiPhu.uc_start();
             this.uc_start1 = new CoTiPhu.uc_start();
-            this.button1 = new System.Windows.Forms.Button();
             this.tm_choose = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.bt_cai_dat = new System.Windows.Forms.Button();
+            this.bt_trang_chu = new System.Windows.Forms.Button();
+            this.bt_sound = new System.Windows.Forms.Button();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pn_user0.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_avatar0)).BeginInit();
@@ -102,8 +103,9 @@
             this.pn_user3.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_avatar3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_dice)).BeginInit();
             this.pn_main_game.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_dice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_user0
@@ -153,7 +155,7 @@
             // pb_avatar0
             // 
             this.pb_avatar0.BackColor = System.Drawing.Color.Red;
-            this.pb_avatar0.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
+            this.pb_avatar0.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_avatar0.BackgroundImage")));
             this.pb_avatar0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_avatar0.Dock = System.Windows.Forms.DockStyle.Left;
             this.pb_avatar0.Location = new System.Drawing.Point(0, 0);
@@ -176,6 +178,7 @@
             // 
             // pn_user1
             // 
+            this.pn_user1.BackColor = System.Drawing.Color.White;
             this.pn_user1.Controls.Add(this.panel2);
             this.pn_user1.Controls.Add(this.pb_avatar1);
             this.pn_user1.Location = new System.Drawing.Point(1427, 118);
@@ -220,7 +223,7 @@
             // pb_avatar1
             // 
             this.pb_avatar1.BackColor = System.Drawing.Color.Green;
-            this.pb_avatar1.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
+            this.pb_avatar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_avatar1.BackgroundImage")));
             this.pb_avatar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_avatar1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pb_avatar1.Location = new System.Drawing.Point(0, 0);
@@ -232,6 +235,7 @@
             // 
             // pn_user2
             // 
+            this.pn_user2.BackColor = System.Drawing.Color.White;
             this.pn_user2.Controls.Add(this.panel5);
             this.pn_user2.Controls.Add(this.pb_avatar2);
             this.pn_user2.Location = new System.Drawing.Point(1427, 224);
@@ -276,7 +280,7 @@
             // pb_avatar2
             // 
             this.pb_avatar2.BackColor = System.Drawing.Color.Blue;
-            this.pb_avatar2.BackgroundImage = global::CoTiPhu.Properties.Resources._3209203_account_ciecle_person_round_user_icon;
+            this.pb_avatar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_avatar2.BackgroundImage")));
             this.pb_avatar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_avatar2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pb_avatar2.Location = new System.Drawing.Point(0, 0);
@@ -288,6 +292,7 @@
             // 
             // pn_user3
             // 
+            this.pn_user3.BackColor = System.Drawing.Color.White;
             this.pn_user3.Controls.Add(this.panel7);
             this.pn_user3.Controls.Add(this.pb_avatar3);
             this.pn_user3.Location = new System.Drawing.Point(1427, 330);
@@ -346,51 +351,6 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
-            // bt_cai_dat
-            // 
-            this.bt_cai_dat.BackColor = System.Drawing.Color.White;
-            this.bt_cai_dat.FlatAppearance.BorderSize = 0;
-            this.bt_cai_dat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cai_dat.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cai_dat.Image = ((System.Drawing.Image)(resources.GetObject("bt_cai_dat.Image")));
-            this.bt_cai_dat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_cai_dat.Location = new System.Drawing.Point(1424, 519);
-            this.bt_cai_dat.Margin = new System.Windows.Forms.Padding(0);
-            this.bt_cai_dat.Name = "bt_cai_dat";
-            this.bt_cai_dat.Size = new System.Drawing.Size(351, 59);
-            this.bt_cai_dat.TabIndex = 5;
-            this.bt_cai_dat.Text = "Tùy chọn";
-            this.bt_cai_dat.UseVisualStyleBackColor = false;
-            this.bt_cai_dat.Click += new System.EventHandler(this.bt_cai_dat_Click);
-            // 
-            // bt_trang_chu
-            // 
-            this.bt_trang_chu.BackColor = System.Drawing.Color.Azure;
-            this.bt_trang_chu.FlatAppearance.BorderSize = 0;
-            this.bt_trang_chu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_trang_chu.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_trang_chu.Image = ((System.Drawing.Image)(resources.GetObject("bt_trang_chu.Image")));
-            this.bt_trang_chu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_trang_chu.Location = new System.Drawing.Point(1424, 454);
-            this.bt_trang_chu.Margin = new System.Windows.Forms.Padding(0);
-            this.bt_trang_chu.Name = "bt_trang_chu";
-            this.bt_trang_chu.Size = new System.Drawing.Size(351, 65);
-            this.bt_trang_chu.TabIndex = 6;
-            this.bt_trang_chu.Text = "Trang  chủ";
-            this.bt_trang_chu.UseVisualStyleBackColor = false;
-            this.bt_trang_chu.Click += new System.EventHandler(this.bt_trang_chu_Click);
-            // 
-            // bt_sound
-            // 
-            this.bt_sound.BackgroundImage = global::CoTiPhu.Properties.Resources._103167_speaker_audio_sound_music_volume_icon;
-            this.bt_sound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_sound.Location = new System.Drawing.Point(1555, 779);
-            this.bt_sound.Name = "bt_sound";
-            this.bt_sound.Size = new System.Drawing.Size(100, 100);
-            this.bt_sound.TabIndex = 3;
-            this.bt_sound.UseVisualStyleBackColor = true;
-            this.bt_sound.Click += new System.EventHandler(this.bt_sound_Click);
-            // 
             // tb_info
             // 
             this.tb_info.Location = new System.Drawing.Point(243, 424);
@@ -400,24 +360,13 @@
             this.tb_info.TabIndex = 0;
             this.tb_info.TextChanged += new System.EventHandler(this.tb_info_TextChanged);
             // 
-            // pb_dice
-            // 
-            this.pb_dice.BackgroundImage = global::CoTiPhu.Properties.Resources.M6;
-            this.pb_dice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb_dice.Location = new System.Drawing.Point(637, 224);
-            this.pb_dice.Name = "pb_dice";
-            this.pb_dice.Size = new System.Drawing.Size(152, 149);
-            this.pb_dice.TabIndex = 2;
-            this.pb_dice.TabStop = false;
-            this.pb_dice.Click += new System.EventHandler(this.pb_dice_Click);
-            // 
             // pn_main_game
             // 
             this.pn_main_game.BackColor = System.Drawing.Color.Azure;
-            this.pn_main_game.Controls.Add(this.uc_info_land);
+            this.pn_main_game.Controls.Add(this.uc_winer);
+            this.pn_main_game.Controls.Add(this.bt_build);
             this.pn_main_game.Controls.Add(this.bt_sell);
             this.pn_main_game.Controls.Add(this.bt_buy);
-            this.pn_main_game.Controls.Add(this.button3);
             this.pn_main_game.Controls.Add(this.bt_end_step);
             this.pn_main_game.Controls.Add(this.uc_13);
             this.pn_main_game.Controls.Add(this.uc_12);
@@ -453,14 +402,27 @@
             this.pn_main_game.TabIndex = 0;
             this.pn_main_game.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_main_game_Paint);
             // 
-            // uc_info_land
+            // uc_winer
             // 
-            this.uc_info_land.BackColor = System.Drawing.Color.White;
-            this.uc_info_land.Location = new System.Drawing.Point(424, 252);
-            this.uc_info_land.Name = "uc_info_land";
-            this.uc_info_land.Size = new System.Drawing.Size(617, 358);
-            this.uc_info_land.TabIndex = 19;
-            this.uc_info_land.Visible = false;
+            this.uc_winer.BackColor = System.Drawing.Color.Transparent;
+            this.uc_winer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uc_winer.BackgroundImage")));
+            this.uc_winer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uc_winer.Location = new System.Drawing.Point(470, 297);
+            this.uc_winer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uc_winer.Name = "uc_winer";
+            this.uc_winer.Size = new System.Drawing.Size(459, 281);
+            this.uc_winer.TabIndex = 19;
+            this.uc_winer.Visible = false;
+            // 
+            // bt_build
+            // 
+            this.bt_build.Location = new System.Drawing.Point(699, 679);
+            this.bt_build.Name = "bt_build";
+            this.bt_build.Size = new System.Drawing.Size(119, 41);
+            this.bt_build.TabIndex = 18;
+            this.bt_build.Text = "Xây";
+            this.bt_build.UseVisualStyleBackColor = true;
+            this.bt_build.Click += new System.EventHandler(this.bt_build_Click);
             // 
             // bt_sell
             // 
@@ -481,15 +443,6 @@
             this.bt_buy.Text = "Mua";
             this.bt_buy.UseVisualStyleBackColor = true;
             this.bt_buy.Click += new System.EventHandler(this.bt_buy_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(718, 679);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 41);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Xong";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // bt_end_step
             // 
@@ -717,6 +670,17 @@
             this.uc_11.Size = new System.Drawing.Size(194, 145);
             this.uc_11.TabIndex = 4;
             // 
+            // pb_dice
+            // 
+            this.pb_dice.BackgroundImage = global::CoTiPhu.Properties.Resources.M6;
+            this.pb_dice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb_dice.Location = new System.Drawing.Point(637, 224);
+            this.pb_dice.Name = "pb_dice";
+            this.pb_dice.Size = new System.Drawing.Size(152, 149);
+            this.pb_dice.TabIndex = 2;
+            this.pb_dice.TabStop = false;
+            this.pb_dice.Click += new System.EventHandler(this.pb_dice_Click);
+            // 
             // uc_start2
             // 
             this.uc_start2.AutoSize = true;
@@ -747,6 +711,11 @@
             this.uc_start1.TabIndex = 3;
             this.uc_start1.Load += new System.EventHandler(this.uc_start1_Load);
             // 
+            // tm_choose
+            // 
+            this.tm_choose.Interval = 400;
+            this.tm_choose.Tick += new System.EventHandler(this.tm_choose_Tick);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -762,12 +731,54 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Cài đặt";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.bt_cai_dat_Click);
             // 
-            // tm_choose
+            // bt_cai_dat
             // 
-            this.tm_choose.Interval = 400;
-            this.tm_choose.Tick += new System.EventHandler(this.tm_choose_Tick);
+            this.bt_cai_dat.BackColor = System.Drawing.Color.White;
+            this.bt_cai_dat.FlatAppearance.BorderSize = 0;
+            this.bt_cai_dat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cai_dat.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cai_dat.Image = ((System.Drawing.Image)(resources.GetObject("bt_cai_dat.Image")));
+            this.bt_cai_dat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_cai_dat.Location = new System.Drawing.Point(1424, 519);
+            this.bt_cai_dat.Margin = new System.Windows.Forms.Padding(0);
+            this.bt_cai_dat.Name = "bt_cai_dat";
+            this.bt_cai_dat.Size = new System.Drawing.Size(351, 59);
+            this.bt_cai_dat.TabIndex = 5;
+            this.bt_cai_dat.Text = "Tùy chọn";
+            this.bt_cai_dat.UseVisualStyleBackColor = false;
+            this.bt_cai_dat.Click += new System.EventHandler(this.bt_cai_dat_Click);
+            // 
+            // bt_trang_chu
+            // 
+            this.bt_trang_chu.BackColor = System.Drawing.Color.Azure;
+            this.bt_trang_chu.FlatAppearance.BorderSize = 0;
+            this.bt_trang_chu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_trang_chu.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_trang_chu.Image = ((System.Drawing.Image)(resources.GetObject("bt_trang_chu.Image")));
+            this.bt_trang_chu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_trang_chu.Location = new System.Drawing.Point(1424, 454);
+            this.bt_trang_chu.Margin = new System.Windows.Forms.Padding(0);
+            this.bt_trang_chu.Name = "bt_trang_chu";
+            this.bt_trang_chu.Size = new System.Drawing.Size(351, 65);
+            this.bt_trang_chu.TabIndex = 6;
+            this.bt_trang_chu.Text = "Trang  chủ";
+            this.bt_trang_chu.UseVisualStyleBackColor = false;
+            this.bt_trang_chu.Visible = false;
+            this.bt_trang_chu.Click += new System.EventHandler(this.bt_trang_chu_Click);
+            // 
+            // bt_sound
+            // 
+            this.bt_sound.BackgroundImage = global::CoTiPhu.Properties.Resources.sound_;
+            this.bt_sound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_sound.Location = new System.Drawing.Point(1533, 721);
+            this.bt_sound.Name = "bt_sound";
+            this.bt_sound.Size = new System.Drawing.Size(100, 100);
+            this.bt_sound.TabIndex = 3;
+            this.bt_sound.UseVisualStyleBackColor = true;
+            this.bt_sound.Click += new System.EventHandler(this.bt_sound_Click);
             // 
             // main
             // 
@@ -805,9 +816,10 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_avatar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_dice)).EndInit();
             this.pn_main_game.ResumeLayout(false);
             this.pn_main_game.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_dice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -838,7 +850,6 @@
         private System.Windows.Forms.PictureBox pb_avatar3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button bt_cai_dat;
-        private System.Windows.Forms.Button bt_trang_chu;
         private uc_start uc_start1;
         private System.Windows.Forms.TextBox tb_info;
         private uc_start uc_start2;
@@ -870,9 +881,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button bt_sell;
         private System.Windows.Forms.Button bt_buy;
-        private System.Windows.Forms.Button button3;
-        private Information.Information uc_info_land;
         private System.Windows.Forms.Timer tm_choose;
+        private System.Windows.Forms.Button bt_build;
+        private System.Windows.Forms.Button bt_trang_chu;
+        private Information.Winer uc_winer;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
 

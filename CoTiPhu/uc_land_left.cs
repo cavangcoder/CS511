@@ -35,27 +35,37 @@ namespace CoTiPhu
         }
         public void update_house(int count)
         {
-            count_house += count;
+            count_house = count;
+            lb_house.Text = "x" + count_house.ToString();
             if (count_house < 1)
             {
                 pn_house.Visible = false;
+            }
+            else
+            {
+                pn_house.Visible = true;
             }
 
         }
         public void update_villa(int count)
         {
-            count_villa += count;
+            count_villa = count;
+            lb_villa.Text = "x" + count_villa.ToString();
             if (count_villa < 1)
             {
                 pn_house.Visible = false;
+            }
+            else
+            {
+                pn_house.Visible = true;
             }
 
         }
         public void set_color_user(Color color0, Color color1, Color color2, Color color3)
         {
-            bt_user2.BackColor = color0;
+            bt_user0.BackColor = color0;
             bt_user1.BackColor = color1;
-            bt_user0.BackColor = color2;
+            bt_user2.BackColor = color2;
             bt_user3.BackColor = color3;
         }
         public void update_user(int id)
@@ -63,13 +73,13 @@ namespace CoTiPhu
             switch (id)
             {
                 case 0:
-                    bt_user2.Visible ^= true;
+                    bt_user0.Visible ^= true;
                     break;
                 case 1:
                     bt_user1.Visible ^= true;
                     break;
                 case 2:
-                    bt_user0.Visible ^= true;
+                    bt_user2.Visible ^= true;
                     break;
                 case 3:
                     bt_user3.Visible ^= true;
@@ -77,6 +87,37 @@ namespace CoTiPhu
                 default:
                     break;
             }
+        }
+        public void buy(int id)
+        {
+            switch (id)
+            {
+                case 0:
+                    bt_name.ForeColor = bt_user0.BackColor;
+                    break;
+                case 1:
+                    bt_name.ForeColor = bt_user1.BackColor;
+                    break;
+                case 2:
+                    bt_name.ForeColor = bt_user2.BackColor;
+                    break;
+                case 3:
+                    bt_name.ForeColor = bt_user3.BackColor;
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        public void unbuy()
+        {
+            bt_name.ForeColor = Color.Black;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

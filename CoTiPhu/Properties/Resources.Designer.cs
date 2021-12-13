@@ -63,16 +63,6 @@ namespace CoTiPhu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _103167_speaker_audio_sound_music_volume_icon {
-            get {
-                object obj = ResourceManager.GetObject("103167_speaker_audio_sound_music_volume_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _106217_sound_icon {
             get {
                 object obj = ResourceManager.GetObject("106217_sound_icon", resourceCulture);
@@ -87,6 +77,25 @@ namespace CoTiPhu.Properties {
             get {
                 object obj = ResourceManager.GetObject("_3209203_account_ciecle_person_round_user_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6dmeoIGMtYO27Dz_Red_Arrow_PNG_Backgádasdsadaround_Image {
+            get {
+                object obj = ResourceManager.GetObject("6dmeoIGMtYO27Dz-Red-Arrow-PNG-Backgádasdsadaround-Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream buy {
+            get {
+                return ResourceManager.GetStream("buy", resourceCulture);
             }
         }
         
@@ -111,11 +120,30 @@ namespace CoTiPhu.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream dice_ {
+            get {
+                return ResourceManager.GetStream("dice_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap dice1 {
             get {
                 object obj = ResourceManager.GetObject("dice1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dola {
+            get {
+                object obj = ResourceManager.GetObject("dola", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -232,6 +260,34 @@ namespace CoTiPhu.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream money {
+            get {
+                return ResourceManager.GetStream("money", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream move {
+            get {
+                return ResourceManager.GetStream("move", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap no_sound {
+            get {
+                object obj = ResourceManager.GetObject("no_sound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap pngwing_com {
@@ -288,6 +344,35 @@ namespace CoTiPhu.Properties {
             get {
                 object obj = ResourceManager.GetObject("sdfsdfsd1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sound_ {
+            get {
+                object obj = ResourceManager.GetObject("sound_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sound_1 {
+            get {
+                object obj = ResourceManager.GetObject("sound_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream vaotu {
+            get {
+                return ResourceManager.GetStream("vaotu", resourceCulture);
             }
         }
         

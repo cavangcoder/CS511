@@ -25,7 +25,7 @@ namespace CoTiPhu
         {
             InitializeComponent();
         }
-        int time_sleep = 500;
+        
         public void choose()
         {
             BackColor = color_choose;
@@ -35,25 +35,62 @@ namespace CoTiPhu
             BackColor = color_origin;
         }
 
+        public void buy(int id)
+        {
+            switch (id)
+            {
+                case 0:
+                    bt_name.ForeColor = bt_user0.BackColor;
+                    break;
+                case 1:
+                    bt_name.ForeColor = bt_user1.BackColor;
+                    break;
+                case 2:
+                    bt_name.ForeColor = bt_user2.BackColor;
+                    break;
+                case 3:
+                    bt_name.ForeColor = bt_user3.BackColor;
+                    break;
+                default:
+                    break;
+            }
+          
+        }
+
+        public void unbuy()
+        {
+            bt_name.ForeColor = Color.Black;
+        }
+
         public void rename(string name)
         {
             bt_name.Text = name;
         }
         public void update_house(int count)
         {
-            count_house += count;
+            count_house = count;
+            lb_house.Text = "x" + count_house.ToString();
             if (count_house < 1)
             {
                 pn_house.Visible = false;
+            }
+            else
+            {
+                pn_house.Visible = true;
             }
 
         }
         public void update_villa(int count)
         {
-            count_villa += count;
+            count_villa = count;
+            lb_villa.Text = "x" + count_villa.ToString();
             if (count_villa < 1)
             {
                 pn_house.Visible = false;
+            }
+            else
+            {
+                pn_house.Visible = true;
             }
 
         }
